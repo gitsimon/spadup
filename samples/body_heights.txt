@@ -1,0 +1,6 @@
+Julia	f	153
+Beat	m	188
+Manuel	m	169
+Sabine	f	169
+Philip		178
+Laura	f	166
