@@ -2,24 +2,25 @@
 This script finds if a dna sequence (passed on standard input) starts with a G or C nucleotide.
 """
 import fileinput
+from typing import List
 
 # Input:
 """
 TGGAGTCAGGTATCACCAGTGGTTTCCTGCGATCGACGCG
+TGCGGCTGGGCGTATGGAGANGNCCATGGTTCCTTGACGT
+GGCGCATTGCGAGAGCTGTCGATGACGTCGCCCGGCTTCA
+ATACGGGGAGTGTACCCGACGCGATTGCCCCGCAATCTGG
 """
 
-total_count = 0
-gc_count = 0
+nucleotides: List[str] = []
+for line in fileinput.input():
+    nucleotides += line.strip()
 
-line = fileinput.input()[0]
-nucleotides = line.strip()
+first: str = nucleotides[0]
 
-first = nucleotides[0]
-
-result = False
+result: bool = False
 
 if first == 'C' or first == 'G':
     result = True
 
-print(first)
 print(result)
