@@ -12,6 +12,7 @@
 # The sys module supports reading files, command-line arguments, etc.
 import sys
 
+
 # Function to convert the contents of dna_filename into a string of nucleotides
 def filename_to_string(dna_filename):
     """ 
@@ -42,7 +43,8 @@ def filename_to_string(dna_filename):
             # Concatenate this line to the end of the current string
             seq = seq + line
     return seq
-    
+
+
 # Function to return GC Classification
 def classify(gc_content):
     """
@@ -52,11 +54,12 @@ def classify(gc_content):
     """
 
     # This statement is a placeholder. For Problem 8, replace it with your
-    # code (will be more than one line) that sets classification to the 
+    # code (will be more than one line) that sets classification to the
     # correct value based on gc_content. (And then delete this comment.)
     classification = "high"
 
     return classification
+
 
 ###########################################################################
 ### Main program begins here
@@ -64,7 +67,7 @@ def classify(gc_content):
 
 # Check if the user provided an argument
 if len(sys.argv) < 2:
-    print "You must supply a file name as an argument when running this program."
+    print("You must supply a file name as an argument when running this program.")
     sys.exit(2)
 
 # Save the 1st argument provided by the user, as a string.
@@ -92,9 +95,9 @@ for base in nucleotides:
     if base == 'C' or base == 'G':
         gc_count = gc_count + 1
 
-gc_content = float(gc_count) / total_count
+gc_content = gc_count / total_count
 
-print 'GC-content:', gc_content
+print(('GC-content:', gc_content))
 
 # You can add more assertions here to check properties that you think
 # should be true about your results. If the condition listed is false,
