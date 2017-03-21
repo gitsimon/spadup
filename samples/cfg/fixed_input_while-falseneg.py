@@ -9,7 +9,7 @@ from typing import List
 12
 """
 
-x = int(input()) # ANALYSIS SAYS: x used (but is not)
+x = int(input())  # ANALYSIS SAYS: x used (but is not)
 # {x}
 count = 1
 # {count (pct: 1 > x || x%1 != 0), x}
