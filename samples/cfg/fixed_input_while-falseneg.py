@@ -16,7 +16,7 @@ count = 1
 i = 2
 # {count (pct: i > x || x%i != 0), i, x}
 while i <= x:
-    # {count (pct: x%i != 0)}
+	# {count (pct: x%i != 0)}
     if x % i == 0:
         # {}
         count = 1  # BUG, should be: count += 1

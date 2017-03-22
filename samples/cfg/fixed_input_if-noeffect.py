@@ -20,7 +20,7 @@ asc = False
 
 # {asc}
 """
-x1,x2,x3 are not in set since none of the use-def-chains of any vars in property set, i.e. {asc}, do not end inside if-stmt
+x1,x2,x3 are not in set since none of the use-def-chains of any vars in property set anywhere inside if, i.e. {asc}, do not end inside if-stmt
 """
 if x1 <= x2 <= x3:
     # {asc}
